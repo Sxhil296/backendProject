@@ -11,10 +11,10 @@ const registerUser = asyncHandler(async (req, res) => {
   // console.log(username);
   // console.log(email);
 
-  //validation - not empty
-  // if (!fullName || !username || !password || !email) {
-  //   return res.status(400).json({ message: "Please fill all fields" });
-  //   }
+  /*validation - not empty
+  if (!fullName || !username || !password || !email) {
+    return res.status(400).json({ message: "Please fill all fields" });
+    }*/
   if (
     [fullName, email, username, password].some((field) => field?.trim() === "")
   ) {
@@ -80,4 +80,6 @@ const registerUser = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, createdUser, "User registered successfully!"));
 });
 
-export { registerUser };
+const loginUser = asyncHandler(async (req, res) => {});
+
+export { registerUser, loginUser };
