@@ -103,7 +103,7 @@ const loginUser = asyncHandler(async (req, res) => {
   const { email, username, password } = req.body;
 
   //check username or email to give access
-  if (!email || !username) {
+  if (!email && !username) {
     throw new ApiError(400, "Email or username field is missing!");
   }
 
