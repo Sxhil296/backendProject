@@ -149,7 +149,7 @@ const loginUser = asyncHandler(async (req, res) => {
           "User logged In Successfully"
       )
   )
-
+    
 });
 
 //LOGOUT
